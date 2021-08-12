@@ -1,4 +1,3 @@
-
 class No:
     def __init__(self, valor):
         self.valor = valor
@@ -20,6 +19,7 @@ class No:
     def setdireita(self, direita):
         self.direita = direita
 
+
 no1 = No(8)
 no2 = No(4)
 no3 = No(9)
@@ -33,25 +33,29 @@ no3.setdireita(no4)
 no2.setesquerda(no5)
 
 print("No1")
-print(no1.obtervalor, end=" ")
-print(no1.obteresquerda, end=" ")
-print(no1.obterdireita)
+print("[" + str(no1.obtervalor()) + "]")
+print(no1.obteresquerda().obtervalor(), end=" ")
+print(no1.obterdireita().obtervalor())
+print()
 
 
 print("No2")
-print(no1.obtervalor, end=" ")
-print(no1.obteresquerda)
-
+print("[" + str(no2.obtervalor()) + "]")
+print(no2.obteresquerda().obtervalor())
+print()
 
 
 print("No3")
-print(no1.obtervalor, end=" ")
-print(no1.obterdireita)
+print("[" + str(no3.obtervalor()) + "]")
+print(no3.obterdireita().obtervalor())
+print()
 
 
 print("No4")
-print(no1.obtervalor)
+print("[" + str(no4.obtervalor()) + "]")
+print()
 
 
 print("No5")
-print(no1.obtervalor)
+print("[" + str(no5.obtervalor()) + "]")
+print()
