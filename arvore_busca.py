@@ -1,3 +1,6 @@
+import os
+
+
 class No:
     def __init__(self, valor):
         self.valor = valor
@@ -66,8 +69,35 @@ class Arvore:
             self.buscar(no_atual.obterdireita())
 
 
-tree = Arvore()
-tree.inserir(8)
+def opcao():
+    os.system("clear")
+    print("[1] Inserir\n[2] Mostrar\n[0] Sair")
+
+
+def main():
+    tree = Arvore()
+
+    while True:
+        opcao()
+        op = input()
+
+        if op == "1":
+            print("Valor: ", end=" ")
+            valor = input()
+            tree.inserir(int(valor))
+
+        elif op == "2":
+            tree.buscar(tree.obterraiz())
+            input()
+
+        else:
+            break
+
+
+if __name__ == "__main__":
+    main()
+
+""" tree.inserir(8)
 tree.inserir(3)
 tree.inserir(6)
 tree.inserir(10)
@@ -75,6 +105,4 @@ tree.inserir(14)
 tree.inserir(1)
 tree.inserir(7)
 tree.inserir(13)
-tree.inserir(4)
-
-tree.buscar(tree.obterraiz())
+tree.inserir(4) """
